@@ -1,6 +1,7 @@
 :root {
   --font-family-heading: 'Poppins', sans-serif;
   --font-family-paragraph: Helvetica, sans-serif;
+  --font-family-post-content: 'Merriweather', serif;
   --font-family-monospace: monospace;
   --base-color: {{ .Site.Params.baseColor | default "#ffffff" }};
   --base-offset-color: {{ .Site.Params.baseOffsetColor | default "#eaeaea" }};
@@ -45,7 +46,7 @@ body {
   }
   &.frame {
     min-height: 100vh;
-    border: 18px solid var(--highlight-color);
+    border: 12px solid var(--highlight-color);
   }
 }
 

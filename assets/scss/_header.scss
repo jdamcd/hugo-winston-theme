@@ -13,8 +13,14 @@
     text-transform: uppercase;
     margin-right: 30px;
   }
+  a {
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
+      text-underline-offset: 4px;
+    }
+  }
 }
-
 
 .hamburger-trigger {
   height: 30px;

@@ -1,11 +1,9 @@
 .summary {
   margin-bottom: 50px;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 26px;
   @include breakpoint('small') {
     margin-bottom: 80px;
-    font-size: 18px;
-    line-height: 26px;
   }
   .summary-date {
     font-weight: bold;
@@ -20,6 +18,13 @@
       width: 80%;
       font-size: 52px;
       line-height: 58px;
+    }
+    a {
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 4px;
+      }
     }
   }
   .summary-description {
