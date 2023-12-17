@@ -15,9 +15,8 @@
         display: inline-block;
         text-decoration: none;
         &:hover {
-          text-decoration: underline;
-          text-decoration-thickness: 4px;
-          text-underline-offset: 4px;
+          text-decoration: none;
+          opacity: 0.8;
         }
       }
       &.active {
