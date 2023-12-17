@@ -1,11 +1,7 @@
 ---
 title: 'About'
-image: images/writer.jpeg
-url: "about"
-menu:
-  main:
-    name: "About"
-    weight: 3
+url: "/about/"
+image: images/about.jpg
 ---
 
 ## Contra vagos

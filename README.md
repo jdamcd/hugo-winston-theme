@@ -75,6 +75,14 @@ hugo server
 
 Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
+# Localhost inside exampleSite
+
+You can run this site without installing it as a hugo theme using the following command. I use this for theme development.
+
+```
+hugo server --source=exampleSite --theme=../..
+```
+
 # Configuration
 
 ### Config options
@@ -86,16 +94,24 @@ Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your b
   twitter_handle = "@zerostaticio"
   showAuthorOnHomepage = true
   showAuthorOnPosts = false
-  showPostsOnHomepage = false
+  showIntroContentOnHomepage = true
+  showPostsOnHomepage = true
+  usePaginationOnHomepage = false
+  limitPostsOnHomepage = 3 # only used if usePaginationOnHomepage is false
+  sortPostsByDateOldestFirst = false
   addDot = true
   addFrame = true
   highlightColor = '#7b16ff'
   baseColor = "#ffffff"
   baseOffsetColor = "#eaeaea"
-  highlightColor = "#7b16ff"
-  dotColor = "#7b16ff"
   headingColor = "#1c1b1d"
   textColor = "#4e5157"
+  dotColor = "#7b16ff"
+  enableGoogleFonts = true 
+  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+  fontFamilyHeading = "Poppins"
+  fontFamilyParagraph = "Helvetica"
+  fontFamilyMonospace = "monospace"
 ```
 
 ### Google Analytics
@@ -113,28 +129,30 @@ Add your google analytics ID to the `config.toml`
 Add your plausible analytics domain to the `config.toml`.
 This is `data-domain` in your [tracking script code](https://plausible.io/docs/plausible-script).
 
-```
-// config.toml
+```toml
+# config.toml
 [params]
-  plausible_analytics_domain = "barryhennessy.com"
+  plausible_analytics_domain = "example.com"
 ```
 
 # Deploying to Netlify
 
-Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.
-
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/hugo-winston-theme)
 
-This theme includes a `netlify.toml` which is configured to deploy to Netlify from the `exampleSite` folder. See this discussion on how to deploy your site on Netlify from the `exampleSite` folder - https://discourse.gohugo.io/t/deploy-your-theme-to-netlify/15508
+This theme includes a `netlify.toml` which is [configured to deploy to Netlify](https://discourse.gohugo.io/t/deploy-your-theme-to-netlify/15508) from the `exampleSite` folder. If you have installed this theme into a new Hugo site and the exampleSite folder was copied or removed, you should delete the `netlify.toml` file.
 
-Most likely if you are deploying to Netlify and created a new Hugo site or added this theme to an existing Hugo site then you are not deploying from the `exampleSite` directory and you can delete the `netlify.toml` file.
 
-### Other Hugo Themes by Zerostatic
+### More Hugo Themes by Zerostatic
 
-- [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme)
-- [Hugo Serif](https://github.com/zerostaticthemes/hugo-serif-theme)
-- [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme)
-- [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/)
-- [Hugo Paradigm](https://www.zerostatic.io/theme/hugo-paradigm/)
+- [Hugo Hero](https://github.com/zerostaticthemes/hugo-hero-theme) - Open-source business theme
+- [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme) - Open-source documentation theme
+- [Hugo Serif](https://github.com/zerostaticthemes/hugo-serif-theme) - Open-source business theme
+- [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme) - Open-source blog theme
+- [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/) - Premium advanced multi page business & marketing theme
+- [Hugo Paradigm](https://www.zerostatic.io/theme/hugo-paradigm/) - Premium landing page + site builder theme
+- [Hugo Lever](https://www.zerostatic.io/theme/hugo-lever/) - Premium personal / bio theme
+- [Hugo Shard](https://www.zerostatic.io/theme/hugo-lever/) - Premium SAAS / landing page theme
 
-🇦🇺 **Made in Australia** by Robert Austin - leave a star mate!
+### Find hundreds more Hugo themes on Built At Lightspeed
+
+[<img alt="Built At Lightspeed Hugo themes directory screenshot" width="400px" src="https://www.zerostatic.io/images/builtatlightspeed-hugo-themes.jpg" />](https://builtatlightspeed.com/category/hugo)
