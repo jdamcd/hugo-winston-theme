@@ -33,10 +33,10 @@
     {{ if .Site.Params.twitter_handle }}<meta name="twitter:creator" content="{{ .Site.Params.twitter_handle }}"/>{{ end }}
   {{ end }}
 
-  {{ if and .Site.Params.googleFontsUrl .Site.Params.enableGoogleFonts }}
+  {{ if and .Site.Params.headingFontUrl .Site.Params.enableGoogleFonts }}
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="{{ .Site.Params.googleFontsUrl }}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link href="{{ .Site.Params.headingFontUrl }}" rel="stylesheet">
+    <link href="{{ .Site.Params.contentFontUrl }}" rel="stylesheet">
   {{ end }}
 
   {{ partial "extend-head.html" . }}
